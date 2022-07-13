@@ -1,0 +1,73 @@
+<link href="altaproducto.component.css" rel="stylesheet">
+
+<body class="bg-light">
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/assets/logo.jpg" alt="" width="72" height="57">
+      <p class="lead">REGISTRO DE NUEVO PRODUCTO</p>
+    </div>
+
+    <div class="col-md-7 col-lg-8">
+
+      <h4 class="mb-3">NUEVO PRODUCTO</h4>
+      <form [formGroup]="formAltaProducto" (submit)="SaveProducto()"  class="needs-validation">
+        <div class="row g-3">
+          <div class="col-sm-6">
+
+
+            <div class="col-12">
+              <label for="nombre" class="form-label">Nombre del producto <span class="text-muted">(Código del producto)</span></label>
+              <input type="nombre" class="form-control" id="nombre" formControlName="nombre">
+              <div class="invalid-feedback">
+                Por favor introduce el nombre del producto
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <label for="descripcion" class="form-label">Descripción del producto </label>
+              <input type="descripcion" class="form-control" id="descripcion" formControlName="descripcion">
+              <div class="invalid-feedback">
+                Por favor introduce la descripcion del producto.
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <label for="precio" class="form-label">Precio del producto</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">$MXN</span>
+                <input type="text" class="form-control" id="precio" formControlName="precio">
+                <div class="invalid-feedback">
+                  Campo obligatorio
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select class="form-select" id="categoria" formControlName="categoria">
+                <option value="">Elegir</option>
+                <option>Audio y Video</option>
+                <option>Cómputo</option>
+                <option>Exclusivos</option>
+                <option>Gamers</option>
+                <option>Hogar</option>
+                <option>Salud y Belleza</option>
+                <option>Telefonía</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona una categoría.
+              </div>
+            </div>
+
+            <button  [disabled]="formAltaProducto.invalid" class="btn btn-primary active w-100 btn btn-primary btn-lg" aria-current="page">Guardar nuevo producto</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <app-footer></app-footer>
+  </main>
+</div>

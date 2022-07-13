@@ -1,0 +1,40 @@
+
+<div *ngFor="let i of lista">
+  <label>{{i.id_producto}}</label>
+  <label>{{i.nombre_producto}}</label>
+  <label>{{i.descripcion_producto}}</label>
+  <label>{{i.precio_producto}}</label>
+  <label>{{i.stock_producto}}</label>
+  <Button (click)="EjecutaConsulta()">CONSULTA</Button>
+    <Button (click)="EjecutaBaja()">BAJA</Button>
+    <Button (click)="EjecutaAlta()">AGREGAR PRODUCTO</Button>
+    <Button (click)="EjecutaActualizar()">ACTUALIZAR PRODUCTO</Button>
+</div>
+
+<div *ngFor="let i of listabaja">
+  <label>{{i.id_producto}}</label>
+  <label>{{i.nombre_producto}}</label>
+  <label>{{i.descripcion_producto}}</label>
+  <label>{{i.precio_producto}}</label>
+  <label>{{i.stock_producto}}</label>
+  <Button (click)="EjecutaBaja()">BAJA</Button>
+</div>
+
+<div clas="container-btn"></div>
+<div *ngFor="let i of listaalta">
+  <label>{{i.id_producto}}</label>
+  <label>{{i.nombre_producto}}</label>
+  <label>{{i.descripcion_producto}}</label>
+  <label>{{i.precio_producto}}</label>
+  <label>{{i.stock_producto}}</label>
+  <Button (click)="EjecutaAlta()">AGREGAR PRODUCTO</Button>
+</div>
+
+<div *ngFor="let i of listaactualizar">
+  <label>{{i.id_producto}}</label>
+  <label>{{i.nombre_producto}}</label>
+  <label>{{i.descripcion_producto}}</label>
+  <label>{{i.precio_producto}}</label>
+  <label>{{i.stock_producto}}</label>
+  <Button (click)="EjecutaActualizar()">ACTUALIZAR PRODUCTO</Button>
+</div>

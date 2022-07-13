@@ -18,4 +18,7 @@ ruta.get('producto', (req,res)=>{res.send('ALTA PRODUCTO')})
 ruta.get('categoria', (req,res)=>{res.send('ALTA CTEGORIA')})
 ruta.get('usuario', (req, res)=>{res.send('ALTA USUARIO')})
 
+
+
+
 module.exports = ruta;
